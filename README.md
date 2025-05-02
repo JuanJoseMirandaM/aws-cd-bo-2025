@@ -8,5 +8,5 @@ El desarrollo de este repositorio está impulsado por la comunidad **Pepe**.
 ## Contribuir
 ¡La comunidad es el alma de este proyecto! Si deseas contribuir, por favor, **lee nuestra [Guía de Contribución](./CONTRIBUTING.md).**
 
-## 📄 Licencia
+## Licencia
 Este proyecto está bajo la [Licencia MIT](./LICENSE).

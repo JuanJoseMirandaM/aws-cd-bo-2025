@@ -1,0 +1,1 @@
+export const URL = 'https://day.awscommunity.org.bo'
