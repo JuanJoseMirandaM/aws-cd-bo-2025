@@ -35,7 +35,13 @@
     ]
   },
   "dependencies": {
-    "astro": "^5.7.10"
+    "@fontsource-variable/inconsolata": "^5.2.5",
+    "@fontsource-variable/onest": "^5.2.7",
+    "astro": "^5.7.10",
+    "class-variance-authority": "^0.7.1",
+    "embla-carousel": "^8.6.0",
+    "embla-carousel-autoplay": "^8.6.0",
+    "sharp": "^0.34.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
