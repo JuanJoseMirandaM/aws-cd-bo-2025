@@ -20,6 +20,13 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+
+# Optional eslint cache
+.eslintcache
+
+# TypeScript cache
+*.tsbuildinfo
+
 # IDE folder
 .idea/
 .vscode/
