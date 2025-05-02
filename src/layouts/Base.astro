@@ -1,0 +1,107 @@
+---
+import type { Options } from "@contracts";
+import Favicons from "@components/Favicons.astro";
+import inconsolataWoff2 from "@fontsource-variable/inconsolata/files/inconsolata-latin-wght-normal.woff2?url";
+import onestWoff2 from "@fontsource-variable/onest/files/onest-latin-wght-normal.woff2?url";
+import { Schema } from "astro-seo-schema";
+import "@fontsource-variable/onest";
+import "@fontsource-variable/inconsolata";
+import "@styles/globals.css";
+import "sanitize.css";
+import "sanitize.css/forms.css";
+import "sanitize.css/assets.css";
+import "sanitize.css/typography.css";
+import "sanitize.css/reduce-motion.css";
+
+interface Props {
+  options: Options;
+}
+
+const { options } = Astro.props;
+const { title, description, metaRobots } = options;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+
+    <slot name="preconnect" />
+
+    <slot name="async-script" />
+
+    <slot name="stylesheet" />
+
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href={onestWoff2}
+      rel="preload"
+      type="font/woff2"
+    />
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href={inconsolataWoff2}
+      rel="preload"
+      type="font/woff2"
+    />
+
+    <slot name="preload" />
+
+    <slot name="defer-script" />
+
+    <meta content={metaRobots || "index, follow"} name="robots" />
+    {description && <meta content={description} name="description" />}
+    {description && <link href={Astro.url.href} rel="canonical" />}
+    <meta
+      content="JuanJoseMiranda - https://github.com/JuanJoseMirandaM"
+      name="author"
+    />
+    <meta content={Astro.generator} name="generator" />
+
+    {
+      description && (
+        <Schema
+          item={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "AWS Community Day Bolivia 2025",
+            url: Astro.url.href,
+            logo: Astro.url.href + "og/og.jpg",
+            description:
+              "Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.",
+            sameAs: [
+              "https://www.linkedin.com/company/aws-community-day-bolivia/",
+              "https://www.instagram.com/awscommunitydaybolivia/",
+              "https://www.facebook.com/awscommunitydaybolivia/",
+            ],
+          }}
+        />
+      )
+    }
+
+    <slot name="schema" />
+
+    <Favicons />
+
+    <meta content="dark light" name="color-scheme" />
+    <meta content="#173860" name="theme-color" />
+
+    <slot name="social-media" />
+  </head>
+  <body>
+    <slot />
+
+    <slot name="dynamic-components" />
+  </body>
+</html>
+
+<style>
+  @view-transition {
+    navigation: auto;
+  }
+</style>
