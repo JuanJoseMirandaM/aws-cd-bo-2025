@@ -1,6 +1,8 @@
 ---
 import Layout from '@layouts/Layout.astro'
 
+import Hero from './_index/HeroSection.astro'
+
 const options = {
   title: 'AWS Community Day Bolivia 2025',
   description: 'Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.'
@@ -8,5 +10,7 @@ const options = {
 ---
 
 <Layout options={options}>
-	Hola Mundo!
+	<main>
+    <Hero />
+  </main>
 </Layout>
