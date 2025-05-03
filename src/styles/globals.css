@@ -14,7 +14,7 @@
   --stone-800: #292524;
   --stone-950: #0c0a09;
 
-  --orange-400: #F79820;
+  --orange-400: 247 152 32;
   --orange-500: #FF9900;
   --orange-600: #E47911;
   --orange-700: #FF6C00;
@@ -32,8 +32,8 @@
   --accent: 229, 21, 124;
   --accent-gradient: linear-gradient(
     45deg,
-    rgb(var(--accent)) 0%,
-    rgb(var(--orange-400)) 100%
+    rgb(var(--accent)),
+    rgb(var(--orange-400))
   );
 
   --gap: 0.25rem;
