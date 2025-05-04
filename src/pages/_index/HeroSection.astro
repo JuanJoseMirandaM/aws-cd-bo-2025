@@ -1,0 +1,71 @@
+---
+import ClickToScroll from '@components/ui/ClickToScroll.astro'
+import logo from '@images/assets/awscd-bo-logo.png'
+import { Picture } from 'astro:assets'
+---
+
+<header>
+  <Picture
+    alt="AWSCD Bolivia Logo"
+    class="logo"
+    fetchpriority="high"
+    formats={['avif', 'webp']}
+    height={122}
+    loading="eager"
+    src={logo}
+    width={600}
+  />
+
+  <article class="hero-description">
+    <h1>El evento más esperado del país</h1>
+    <h3>¡No te pierdas la 2da Edición de nuestro Community Day Bolivia!</h3>
+  </article>
+
+  <ClickToScroll
+    href="#como-participar"
+    label="Como puedo participar"
+  />
+</header>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    padding: 108px 72px 0;
+    position: relative;
+
+    @media (width <= 375px) {
+      padding: 48px 24px 0;
+    }
+
+    & .hero-description {
+      text-align: center;
+      padding: 48px 0;
+
+      & h3 {
+        font-weight: 300;
+      }
+    }
+  }
+
+  @media (width <= 1024px) {
+    header {
+      padding: 50px 48px 0;
+
+      & .hero-description {
+        padding: 24px 0;
+
+        & h1 {
+          font-size: 24px;
+        }
+
+        & h3 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+</style>

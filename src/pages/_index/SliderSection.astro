@@ -1,0 +1,69 @@
+---
+import { CARDS } from '@data/constants'
+import CallToAction from "../../components/ui/CallToAction.astro";
+import Card from "../../components/ui/Card.astro";
+---
+<section class="slider-container" id="informacion">
+  <h1>El evento más esperado del país</h1>
+  <p>El <span class="bold">AWS Community Day Bolivia</span> es un evento organizado por la comunidad de usuarios de Amazon Web Services (AWS),
+    donde se comparten conocimientos y experiencias sobre tecnologías en la nube, tendencias y buenas prácticas.
+    Es una oportunidad para aprender y conectar con otros profesionales y entusiastas de AWS.</p>
+  <div class="slider-cards">
+    {
+      CARDS.map(
+        ({ title, description, imgSrc, position}, index: number) => (
+          <>
+            <Card
+              title={title}
+              description={description}
+              imgSrc={imgSrc}
+              position={position}
+            />
+          </>
+        )
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .slider-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1536px;
+    margin: auto;
+    padding-inline: 32px;
+
+    & .bold {
+      font-weight: bold;
+    }
+
+    & .slider-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding-block: 32px 64px;
+    }
+  }
+
+  @media (width<= 1024px) {
+    .slider-container {
+      padding-inline: 48px;
+    }
+  }
+
+  @media (width<= 768px) {
+    .slider-container {
+      padding-inline: 24px;
+
+      h1 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+</style>
