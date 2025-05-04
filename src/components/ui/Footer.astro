@@ -1,0 +1,94 @@
+---
+import awsUgLpz from '@images/assets/aws-ug-lpz.png'
+import awsGirlsBo from '@images/assets/aws-girls-bo-2.png'
+import {Picture} from "astro:assets";
+---
+
+<footer class="footer">
+  <h2>AWS User Groups Bolivia</h2>
+
+  <div class="badge-container">
+    <Picture
+      alt="AWS UG La Paz"
+      fetchpriority="high"
+      formats={['avif', 'webp']}
+      height={150}
+      loading="eager"
+      src={awsUgLpz}
+      width={150}
+    />
+
+    <Picture
+      alt="AWS Girls Bolivia"
+      fetchpriority="high"
+      formats={['avif', 'webp']}
+      height={150}
+      loading="eager"
+      src={awsGirlsBo}
+      width={200}
+    />
+  </div>
+
+  <div class="copyright-text">
+    <span>Copyright ©2025 AWS AWS Community Day Bolivia. Todos los derechos reservados.</span>
+    <span>Designed with ♥ by <a href="https://www.linkedin.com/in/juanjosemirandam/" target="_blank" class="underline">Juan Jose Miranda</a></span>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 60px 20px;
+    padding-inline: 32px;
+    width: 100%;
+    max-width: 1536px;
+    margin: auto;
+
+    & h2 {
+      margin: 0;
+    }
+
+    & .badge-container {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    & .copyright-text {
+      display: flex;
+      justify-content: space-between;
+
+      & span {
+        display: block;
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+  }
+
+  @media (width <= 1024px) {
+    .footer {
+      padding: 0 24px;
+
+      & h2 {
+        font-size: 32px;
+      }
+
+      & img {
+        width: 150px;
+        height: 150px;
+      }
+
+      & .copyright-text {
+        flex-direction: column;
+
+        & span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+</style>
