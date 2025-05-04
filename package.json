@@ -13,7 +13,8 @@
     "build": "astro check && astro build",
     "dev": "astro dev",
     "preview": "astro preview",
-    "release": "standard-version"
+    "release": "standard-version",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "simple-git-hooks": {
     "commit-msg": "commitlint --edit $1"
@@ -38,6 +39,7 @@
     "astro-icon": "^1.1.5",
     "astro-seo-schema": "^5.0.0",
     "astro-sitemap": "^1.0.0",
+    "conventional-changelog-cli": "^5.0.0",
     "globals": "^16.0.0",
     "lightningcss": "^1.29.3",
     "lint-staged": "^15.5.1",
