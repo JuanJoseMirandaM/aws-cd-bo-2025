@@ -14,10 +14,17 @@
   --stone-800: #292524;
   --stone-950: #0c0a09;
 
+  --brown-400: 145, 89, 19;
+
   --orange-400: 247 152 32;
   --orange-500: #FF9900;
   --orange-600: #E47911;
   --orange-700: #FF6C00;
+  --orange-gradient: linear-gradient(
+    90deg,
+    rgb(var(--orange-400)),
+    rgb(var(--brown-400))
+  );
 
   --base-100: 54, 26, 73;
   --base-200: 22, 35, 60;

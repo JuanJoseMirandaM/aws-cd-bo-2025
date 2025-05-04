@@ -46,18 +46,11 @@ const {
     align-items: center;
     gap: 24px;
     width: 100%;
-
-    @media (width > 1024px) {
-      max-width: 346px;
-    }
+    max-width: 346px;
 
     .cta-btn {
       text-decoration: none;
       text-align: center;
-
-      @media (width <= 1024px) {
-        width: 100%;
-      }
     }
 
     .call-to-action-description {
@@ -69,6 +62,14 @@ const {
     }
     .bold-description {
       font-weight: 700;
+    }
+  }
+
+  @media (width <= 768px) {
+    .call-to-action-container {
+      .cta-btn {
+        width: 100%;
+      }
     }
   }
 </style>

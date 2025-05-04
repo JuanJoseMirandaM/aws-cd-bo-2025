@@ -1,9 +1,9 @@
 ---
 import CallToAction from '@components/ui/CallToAction.astro'
 import ClickToScroll from '@components/ui/ClickToScroll.astro'
+import { CTAS } from '@data/constants'
 import letters from '@images/assets/aws-letters.png'
 import { Picture } from "astro:assets";
-import { CTA } from './src/data/constants'
 ---
 <section class="parallax-container" id="como-participar">
   <div class="layer">
@@ -19,7 +19,7 @@ import { CTA } from './src/data/constants'
   </div>
   <div class="parallax-cta">
     {
-      CTA.map(
+      CTAS.map(
         ({ label, description, url, variant, descriptionWeight }, index: number) => (
           <>
             <CallToAction
@@ -29,7 +29,7 @@ import { CTA } from './src/data/constants'
               descriptionWeight={descriptionWeight}
               variant={variant}
             />
-            {index < CTA.length - 1 && <span class="separator" />}
+            {index < CTAS.length - 1 && <span class="separator" />}
           </>
         )
       )
@@ -43,18 +43,19 @@ import { CTA } from './src/data/constants'
 
 <style>
   .parallax-container {
-    max-width: 1146px;
-    margin: auto;
-    padding-block: 48px;
-    padding-inline: 48px;
-    text-align: center;
-    position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 1536px;
+    margin: auto;
+    padding-block: 48px;
+    padding-inline: 32px;
+    text-align: center;
+    position: relative;
     gap: 24px;
 
     @media (width >= 1200px) {
-      padding-block: 480px 200px;
+      padding-block: 520px 200px;
       padding-inline: 0;
       gap: 0;
     }
@@ -64,6 +65,7 @@ import { CTA } from './src/data/constants'
         position: absolute;
         inset: 0;
         mask-image: linear-gradient(transparent 0%, var(--black) 30%, var(--black) 80%, transparent 100%);
+        margin: 32px auto 0 auto;
         z-index: -1;
       }
     }
@@ -73,7 +75,6 @@ import { CTA } from './src/data/constants'
       justify-content: space-between;
       height: 100%;
       width: 100%;
-      max-width: 1280px;
       gap: 1.5rem;
       padding-block: 72px;
 
