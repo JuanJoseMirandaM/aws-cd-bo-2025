@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro'
+import OpenGraph from '@components/OpenGraph.astro'
 
 import Hero from './_index/HeroSection.astro'
 import ParallaxSection from "./_index/ParallaxSection.astro";
@@ -13,6 +14,13 @@ const options = {
 ---
 
 <Layout options={options}>
+  <OpenGraph
+    description={options.description}
+    image="/og/og.jpg"
+    slot="social-media"
+    title={options.title}
+  />
+
 	<main>
     <Hero />
     <ParallaxSection />

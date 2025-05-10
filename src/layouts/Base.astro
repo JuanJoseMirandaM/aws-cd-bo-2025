@@ -1,7 +1,6 @@
 ---
 import type { Options } from "@contracts";
 import Favicons from "@components/Favicons.astro";
-import OpenGraph from "@components/OpenGraph.astro";
 import inconsolataWoff2 from "@fontsource-variable/inconsolata/files/inconsolata-latin-wght-normal.woff2?url";
 import onestWoff2 from "@fontsource-variable/onest/files/onest-latin-wght-normal.woff2?url";
 import { Schema } from "astro-seo-schema";
@@ -88,8 +87,6 @@ const { title, description, metaRobots } = options;
     <slot name="schema" />
 
     <Favicons />
-
-    <OpenGraph />
 
     <meta content="dark light" name="color-scheme" />
     <meta content="#173860" name="theme-color" />
