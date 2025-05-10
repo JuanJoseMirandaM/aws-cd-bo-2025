@@ -1,9 +1,9 @@
 import type { CtaItem } from "../contracts/cta.type.ts";
 import type { CardItem } from "../contracts/card.type.ts";
-import card1 from '../images/assets/card-1.png'
-import card2 from '../images/assets/card-2.png'
-import card3 from '../images/assets/card-3.png'
-import card4 from '../images/assets/card-4.png'
+import card1 from '../images/assets/card-1.jpg'
+import card2 from '../images/assets/card-2.jpg'
+import card3 from '../images/assets/card-3.jpg'
+import card4 from '../images/assets/card-4.jpg'
 
 export const URL = 'https://day.awscommunity.org.bo'
 
