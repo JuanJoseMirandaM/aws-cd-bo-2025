@@ -1,6 +1,7 @@
 ---
 import awsUgLpz from '@images/assets/aws-ug-lpz.png'
-import awsGirlsBo from '@images/assets/aws-girls-bo-2.png'
+import awsGirlsBo from '@images/assets/aws-girls-bo.png'
+import awsUgCbba from '@images/assets/aws-ug-cbba.png'
 import {Picture} from "astro:assets";
 ---
 
@@ -25,12 +26,22 @@ import {Picture} from "astro:assets";
       height={150}
       loading="eager"
       src={awsGirlsBo}
-      width={200}
+      width={150}
+    />
+
+    <Picture
+      alt="AWS UG Cochabamba"
+      fetchpriority="high"
+      formats={['avif', 'webp']}
+      height={150}
+      loading="eager"
+      src={awsUgCbba}
+      width={150}
     />
   </div>
 
   <div class="copyright-text">
-    <span>Copyright ©2025 AWS AWS Community Day Bolivia. Todos los derechos reservados.</span>
+    <span>Copyright ©2025 AWS Community Day Bolivia. Todos los derechos reservados.</span>
     <span>Designed with ♥ by <a href="https://www.linkedin.com/in/juanjosemirandam/" target="_blank" class="underline">Juan Jose Miranda</a></span>
   </div>
 </footer>
@@ -55,6 +66,11 @@ import {Picture} from "astro:assets";
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+
+      & img {
+        height: 150px;
+        width: auto;
+      }
     }
 
     & .copyright-text {
