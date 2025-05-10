@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string
+  description: string
+  image: string
+}
+
+const {
+  title = 'AWS Community Day Bolivia 2025',
+  description = 'Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.',
+  image = '/og/og.jpg',
+} = Astro.props
+---
+
+<!-- Facebook Meta Tags -->
+<meta content={title} property="og:title" />
+<meta content={description} property="og:description" />
+<meta content={new URL(image, Astro.url)} property="og:image" />
+<meta content={Astro.url.href} property="og:url" />
+<meta content="website" property="og:type" />
+
+<!-- Twitter Meta Tags -->
+<meta content="summary_large_image" name="twitter:card" />
+<meta content={title} name="twitter:title" />
+<meta content={description} name="twitter:description" />
+<meta content={new URL(image, Astro.url)} name="twitter:image" />
+<meta content={Astro.url.href} property="twitter:url" />

@@ -20,6 +20,7 @@ export default defineConfig({
     prefetchAll: true,
     defaultStrategy: 'viewport'
   },
+  output: 'static',
   compressHTML: false,
   vite: {
     build: {
