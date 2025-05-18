@@ -17,7 +17,7 @@ export const CTAS: CtaItem[] = [
   },
   {
     label: 'Hazte Sponsor',
-    description: '¡Posiciona tu empresa o marca ante la comunidad cloud en el evento mas grande de Bolivia!',
+    description: '¡Posiciona tu empresa o marca ante la comunidad en el evento cloud mas grande de Bolivia!',
     url: 'https://tally.so/r/nWgO9P',
     variant: 'contained',
     descriptionWeight: 'bold'
@@ -33,26 +33,26 @@ export const CTAS: CtaItem[] = [
 
 export const CARDS: CardItem[] = [
   {
-    title: 'Conoce a los líderes del futuro',
-    description: 'El AWS Community Day te trae charlas, talleres y demostraciones exclusivas, impartidas por expertos de AWS y referentes de la industria en Latinoamérica. Vive experiencias únicas, explora casos de éxito reales y descubre las soluciones más innovadoras que están redefiniendo el panorama digital de hoy.',
+    title: 'Inspírate con Expertos en la nube de AWS',
+    description: 'En el AWS Community Day Bolivia 2025 conoce y escucha a expertos locales e internacionales que están liderando la transformación digital en la región. Aprende de sus experiencias, descubre sus estrategias y únete a la comunidad de líderes cloud del futuro.',
     imgSrc: card1,
     position: 'left'
   },
   {
-    title: 'Conexiones que trascienden',
-    description: 'El AWS Community Day es la oportunidad perfecta para conectar con profesionales afines, intercambiar experiencias, y abordar juntos los desafíos más relevantes. Saldrás no solo con nuevos aprendizajes, sino con contactos clave que podrían transformar tu futuro profesional.',
+    title: 'Networking que Abre Puertas',
+    description: 'Amplía tu red de contactos con profesionales, líderes de la industria y expertos en cloud computing. Comparte ideas, colabora en proyectos y encuentra las conexiones que te ayudarán a crecer profesionalmente.',
     imgSrc: card2,
     position: 'right'
   },
   {
-    title: 'Un entorno para crecer',
-    description: 'En AWS Community Day estarás en un ambiente donde se siente la energía de un espacio diseñado para colaborar, crear y soñar en grande. Tendremos areas especializadas donde podras conectarte con referentes de la industria.',
+    title: 'Prepárate para el Futuro de la Nube',
+    description: 'Descubre las últimas tendencias, avances y mejores prácticas en el ecosistema cloud. Este evento te equipa con el conocimiento y las habilidades que necesitas para enfrentar los desafíos del mañana y aprovechar las oportunidades que ofrece la nube de AWS.',
     imgSrc: card3,
     position: 'left'
   },
   {
-    title: 'Siempre a la vanguardia',
-    description: 'En AWS Community Day estarás al tanto de las últimas tendencias y avances del ecosistema AWS. Este evento te coloca en el epicentro de la innovación, preparándote para enfrentar los retos del mañana y aprovechar las oportunidades que surgen en el acelerado mundo de la nube.',
+    title: 'Descubre Soluciones que Transforman',
+    description: 'El AWS Community Day Bolivia 2025 es evento te conecta con expertos y casos de éxito reales en Bolivia, Latinoamérica y el mundo. Aprende cómo la nube está impulsando la innovación en empresas como la tuya y descubre las herramientas para llevar tu negocio al siguiente nivel.',
     imgSrc: card4,
     position: 'right'
   }
