@@ -6,6 +6,7 @@ interface Props {
   callToActionLabel: string
   callToActionUrl: string
   callToActionDescription: string
+  callToActionType: 'a' | 'button',
   variant?: ButtonVariant
   descriptionWeight?: FontWeight
 }
@@ -14,6 +15,7 @@ const {
   callToActionLabel,
   callToActionUrl,
   callToActionDescription,
+  callToActionType,
   variant = 'outlined',
   descriptionWeight = 'normal'
 } = Astro.props;
@@ -31,7 +33,7 @@ const {
 
   <Button
     class="cta-btn"
-    component="a"
+    component={callToActionType}
     href={callToActionUrl}
     variant={variant}
   >

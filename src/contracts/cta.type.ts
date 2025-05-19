@@ -5,5 +5,6 @@ export interface CtaItem {
   description: string
   url: string
   variant: ButtonVariant
-  descriptionWeight: FontWeight
+  descriptionWeight: FontWeight,
+  type: 'a' | 'button'
 }
