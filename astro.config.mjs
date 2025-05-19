@@ -23,7 +23,7 @@ export default defineConfig({
   compressHTML: false,
   vite: {
     build: {
-      cssMinify: 'lightningcss'
+      cssMinify: false
     },
     css: {
       transformer: 'lightningcss',

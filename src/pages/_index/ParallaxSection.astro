@@ -1,9 +1,9 @@
 ---
 import CallToAction from '@components/ui/CallToAction.astro'
 import ClickToScroll from '@components/ui/ClickToScroll.astro'
-import { CTAS } from '@data/constants'
-import letters from '@images/assets/aws-letters.png'
-import { Picture } from "astro:assets";
+import {CTAS} from '@data/constants'
+import letters from '@images/assets/aws-letters.jpg'
+import {Picture} from "astro:assets";
 ---
 <section class="parallax-container" id="como-participar">
   <div class="layer">
@@ -14,13 +14,13 @@ import { Picture } from "astro:assets";
       formats={['avif', 'webp']}
       height={767}
       src={letters}
-      width={1146}
+      width={1200}
     />
   </div>
   <div class="parallax-cta">
     {
       CTAS.map(
-        ({ label, description, url, variant, descriptionWeight }, index: number) => (
+        ({label, description, url, variant, descriptionWeight}, index: number) => (
           <>
             <CallToAction
               callToActionDescription={description}
@@ -29,7 +29,7 @@ import { Picture } from "astro:assets";
               descriptionWeight={descriptionWeight}
               variant={variant}
             />
-            {index < CTAS.length - 1 && <span class="separator" />}
+            {index < CTAS.length - 1 && <span class="separator"/>}
           </>
         )
       )
@@ -48,23 +48,21 @@ import { Picture } from "astro:assets";
     width: 100%;
     max-width: 1536px;
     margin: auto;
-    padding-block: 48px;
-    padding-inline: 32px;
+    padding-block: 520px 200px;
+    padding-inline: 0;
+    gap: 0;
     text-align: center;
     position: relative;
-    gap: 24px;
-
-    @media (width >= 1200px) {
-      padding-block: 520px 200px;
-      padding-inline: 0;
-      gap: 0;
-    }
 
     & .layer {
       img {
         position: absolute;
         inset: 0;
-        mask-image: linear-gradient(transparent 0%, var(--black) 30%, var(--black) 80%, transparent 100%);
+        mask-image: linear-gradient(to top, transparent, black 100%),
+        linear-gradient(to bottom, transparent, black 20%),
+        linear-gradient(to left, transparent, black 20%),
+        linear-gradient(to right, transparent, black 20%);
+        mask-composite: intersect;
         margin: 32px auto 0 auto;
         z-index: -1;
       }
@@ -86,8 +84,12 @@ import { Picture } from "astro:assets";
     }
   }
 
-  @media (width <= 1024px) {
+  @media (max-width: 1024px) {
     .parallax-container {
+      padding-block: 48px;
+      padding-inline: 32px;
+      gap: 24px;
+
       & .layer {
         & img {
           height: 100%;

@@ -1,11 +1,10 @@
 ---
 import { CARDS } from '@data/constants'
-import CallToAction from "../../components/ui/CallToAction.astro";
 import Card from "../../components/ui/Card.astro";
 ---
 <section class="slider-container" id="informacion">
   <h1>El evento más esperado del país</h1>
-  <p>El <span class="bold">AWS Community Day Bolivia</span> es un evento organizado por la comunidad de usuarios de Amazon Web Services (AWS),
+  <p>El <span class="bold">AWS Community Day Bolivia 2025</span> es un evento gratuito organizado por la comunidad de usuarios de Amazon Web Services (AWS) en Bolivia,
     donde se comparten conocimientos y experiencias sobre tecnologías en la nube, tendencias y buenas prácticas.
     Es una oportunidad para aprender y conectar con otros profesionales y entusiastas de AWS.</p>
   <div class="slider-cards">
@@ -14,6 +13,7 @@ import Card from "../../components/ui/Card.astro";
         ({ title, description, imgSrc, position}, index: number) => (
           <>
             <Card
+              id={index}
               title={title}
               description={description}
               imgSrc={imgSrc}
