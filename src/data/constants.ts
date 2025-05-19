@@ -9,25 +9,28 @@ export const URL = 'https://day.awscommunity.org.bo'
 
 export const CTAS: CtaItem[] = [
   {
-    label: 'Call for Speakers',
+    label: 'Muy pronto Speakers',
     description: '¿Eres experto o experta en AWS, tienes una historia que contar o una solución para compartir?',
-    url: 'https://tally.so/r/nWgO9P',
+    url: '',
     variant: 'outlined',
-    descriptionWeight: 'normal'
+    descriptionWeight: 'normal',
+    type: 'button'
   },
   {
     label: 'Hazte Sponsor',
     description: '¡Posiciona tu empresa o marca ante la comunidad en el evento cloud mas grande de Bolivia!',
     url: 'https://tally.so/r/nWgO9P',
     variant: 'contained',
-    descriptionWeight: 'bold'
+    descriptionWeight: 'bold',
+    type: 'button'
   },
   {
     label: 'Ver AWS CD 2024',
     description: 'Mira todo lo que vivimos el año pasado en el primer AWS Community Day Bolivia',
     url: 'https://2024.awscommunity.org.bo/',
     variant: 'outlined',
-    descriptionWeight: 'normal'
+    descriptionWeight: 'normal',
+    type: 'button'
   }
 ];
 

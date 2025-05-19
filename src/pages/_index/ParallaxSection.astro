@@ -20,11 +20,12 @@ import {Picture} from "astro:assets";
   <div class="parallax-cta">
     {
       CTAS.map(
-        ({label, description, url, variant, descriptionWeight}, index: number) => (
+        ({label, description, url, variant, descriptionWeight, type}, index: number) => (
           <>
             <CallToAction
               callToActionDescription={description}
               callToActionLabel={label}
+              callToActionType={type}
               callToActionUrl={url}
               descriptionWeight={descriptionWeight}
               variant={variant}
