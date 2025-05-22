@@ -11,10 +11,10 @@ export const CTAS: CtaItem[] = [
   {
     label: 'Muy pronto Speakers',
     description: '¿Eres experto o experta en AWS, tienes una historia que contar o una solución para compartir?',
-    url: '',
+    url: 'https://sessionize.com/aws-community-day-bolivia-2025/',
     variant: 'outlined',
     descriptionWeight: 'normal',
-    type: 'button'
+    type: 'a'
   },
   {
     label: 'Hazte Sponsor',
@@ -22,7 +22,7 @@ export const CTAS: CtaItem[] = [
     url: 'https://tally.so/r/nWgO9P',
     variant: 'contained',
     descriptionWeight: 'bold',
-    type: 'button'
+    type: 'a'
   },
   {
     label: 'Ver AWS CD 2024',
@@ -30,7 +30,7 @@ export const CTAS: CtaItem[] = [
     url: 'https://2024.awscommunity.org.bo/',
     variant: 'outlined',
     descriptionWeight: 'normal',
-    type: 'button'
+    type: 'a'
   }
 ];
 
