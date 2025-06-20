@@ -3,7 +3,7 @@ import { Picture } from 'astro:assets'
 import venueImg from '@images/assets/home_venue.png'
 import Button from '../../components/ui/Button.astro'
 
-const { title, address, imageUrl, mapLat, mapLng } = Astro.props;
+const { title, address} = Astro.props;
 ---
 
 <style>
@@ -115,10 +115,6 @@ const { title, address, imageUrl, mapLat, mapLng } = Astro.props;
   </div>
 
   <div class="venue-right">
-    <!-- <OpenStreetMap lat={-16.5195} lng={-68.1100} zoom={17} /> -->
-    <iframe 
-      src="https://www.openstreetmap.org/export/embed.html?bbox=-68.11654329299928%2C-16.524968813948615%2C-68.10758471488954%2C-16.520273338996112&amp;layer=mapnik"
-    >
-    </iframe>
+    <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-66.14584654569627%2C-17.37300514746773%2C-66.1413672566414%2C-17.370667989841635&amp;layer=mapnik"></iframe>
   </div>
 </div>

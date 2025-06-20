@@ -76,7 +76,7 @@ const { targetDate } = Astro.props;
   </div>
 </div>
 
-<script type="module" is:client="load">
+<script type="module">
   const el = document.getElementById("countdown");
   const target = new Date(el.dataset.date);
   console.log(target)
