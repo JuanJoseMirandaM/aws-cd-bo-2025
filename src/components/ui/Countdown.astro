@@ -1,0 +1,94 @@
+---
+const { targetDate } = Astro.props;
+---
+<style>
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-family: sans-serif;
+    color: white;
+    padding: 1rem;
+  }
+
+  .unit {
+    text-align: center;
+  }
+
+  .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .label {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    color: #ccc;
+  }
+
+  .divider {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    height: 5rem;
+    margin: 0 1rem;
+  }
+</style>
+
+<div id="countdown" class="countdown" data-date={targetDate}>
+  <div class="unit">
+    <div class="number" id="days">00</div>
+    <div class="label">Días</div>
+  </div>
+
+  <div class="divider"></div>
+  
+  <div class="unit">
+    <div class="number" id="hours">00</div>
+    <div class="label">Horas</div>
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="unit">
+    <div class="number" id="minutes">00</div>
+    <div class="label">Minutos</div>
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="unit">
+    <div class="number" id="seconds">00</div>
+    <div class="label">Segundos</div>
+  </div>
+</div>
+
+<script type="module" is:client="load">
+  const el = document.getElementById("countdown");
+  const target = new Date(el.dataset.date);
+  console.log(target)
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      el.querySelector("#days").textContent = "00";
+      el.querySelector("#hours").textContent = "00";
+      el.querySelector("#minutes").textContent = "00";
+      el.querySelector("#seconds").textContent = "00";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    el.querySelector("#days").textContent = String(days).padStart(2, "0");
+    el.querySelector("#hours").textContent = String(hours).padStart(2, "0");
+    el.querySelector("#minutes").textContent = String(minutes).padStart(2, "0");
+    el.querySelector("#seconds").textContent = String(seconds).padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>

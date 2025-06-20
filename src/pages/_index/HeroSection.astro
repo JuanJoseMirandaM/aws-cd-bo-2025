@@ -1,5 +1,6 @@
 ---
 import ClickToScroll from '@components/ui/ClickToScroll.astro'
+import Countdown from '@components/ui/Countdown.astro'
 import logo from '@images/assets/awscd-bo-logo.png'
 import { Picture } from 'astro:assets'
 ---
@@ -18,9 +19,10 @@ import { Picture } from 'astro:assets'
 
   <article class="hero-description">
     <h1>20 de Septiembre 2025 - Cochabamba</h1>
-    <h2>Evento gratuito</h2>
     <h3>¡No te pierdas la 2da Edición del AWS Community Day Bolivia!</h3>
   </article>
+
+  <Countdown targetDate="2025-09-20T08:00:00" />
 
   <ClickToScroll
     href="#como-participar"
@@ -34,6 +36,7 @@ import { Picture } from 'astro:assets'
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 56px;
     min-height: 100dvh;
     padding: 108px 72px 0;
     position: relative;
@@ -44,10 +47,15 @@ import { Picture } from 'astro:assets'
 
     & .hero-description {
       text-align: center;
-      padding: 48px 0;
+
+      & h1 {
+        font-size: 2.5rem;
+        margin: 12px;
+      }
 
       & h3 {
         font-weight: 300;
+        margin: 0;
       }
     }
   }
