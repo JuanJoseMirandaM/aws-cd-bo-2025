@@ -6,17 +6,10 @@ import { Picture } from "astro:assets";
 ---
 
 <style>
-  .organizer-badges {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding-inline: 32px;
-    width: 100%;
-    max-width: 1536px;
-    margin: auto;
-
+  .organizer-container {
     & h2 {
       margin: 0;
+      font-weight: 400;
     }
 
     & .badge-container {
@@ -33,13 +26,7 @@ import { Picture } from "astro:assets";
   }
 
   @media (width <= 1024px) {
-    .organizer-badges {
-      padding: 0 24px;
-
-      & h2 {
-        font-size: 32px;
-      }
-
+    .organizer-container {
       & img {
         width: 150px;
         height: 150px;
@@ -47,7 +34,8 @@ import { Picture } from "astro:assets";
     }
   }
 </style>
-<section class="organizer-badges">
+
+<section class="container organizer-container">
   <h2>Organizado por los AWS User Groups de Bolivia</h2>
 
   <div class="badge-container">

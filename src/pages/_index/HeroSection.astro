@@ -4,8 +4,31 @@ import Countdown from '@components/ui/Countdown.astro'
 import logo from '@images/assets/awscd-bo-logo.png'
 import { Picture } from 'astro:assets'
 ---
+<style>
+  .hero-container {
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    min-height: 100dvh;
+    padding-top: 8rem;
+    position: relative;
 
-<header>
+    & .hero-description {
+      text-align: center;
+
+      & h1 {
+        margin: 12px;
+      }
+
+      & h3 {
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+  }
+</style>
+
+<section class="container hero-container">
   <Picture
     alt="AWSCD Bolivia Logo"
     class="logo"
@@ -28,53 +51,4 @@ import { Picture } from 'astro:assets'
     href="#como-participar"
     label="Como puedo participar"
   />
-</header>
-
-<style>
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 56px;
-    min-height: 100dvh;
-    padding: 108px 72px 0;
-    position: relative;
-
-    @media (width <= 375px) {
-      padding: 48px 24px 0;
-    }
-
-    & .hero-description {
-      text-align: center;
-
-      & h1 {
-        font-size: 2.5rem;
-        margin: 12px;
-      }
-
-      & h3 {
-        font-weight: 300;
-        margin: 0;
-      }
-    }
-  }
-
-  @media (width <= 1024px) {
-    header {
-      padding: 50px 48px 0;
-
-      & .hero-description {
-        padding: 24px 0;
-
-        & h1 {
-          font-size: 24px;
-        }
-
-        & h3 {
-          font-size: 16px;
-        }
-      }
-    }
-  }
-</style>
+</section>

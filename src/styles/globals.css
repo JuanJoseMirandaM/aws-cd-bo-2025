@@ -20,28 +20,22 @@
   --orange-500: #FF9900;
   --orange-600: #E47911;
   --orange-700: #FF6C00;
-  --orange-gradient: linear-gradient(
-    90deg,
-    rgb(var(--orange-400)),
-    rgb(var(--brown-400))
-  );
+  --orange-gradient: linear-gradient(90deg,
+      rgb(var(--orange-400)),
+      rgb(var(--brown-400)));
 
   --base-100: 54, 26, 73;
   --base-200: 22, 35, 60;
   --base-300: 23, 56, 96;
-  --background-gradient: linear-gradient(
-    45deg,
-    rgb(var(--base-100)),
-    rgb(var(--base-200)),
-    rgb(var(--base-300))
-  );
+  --background-gradient: linear-gradient(45deg,
+      rgb(var(--base-100)),
+      rgb(var(--base-200)),
+      rgb(var(--base-300)));
 
   --accent: 229, 21, 124;
-  --accent-gradient: linear-gradient(
-    45deg,
-    rgb(var(--accent)),
-    rgb(var(--orange-400))
-  );
+  --accent-gradient: linear-gradient(45deg,
+      rgb(var(--accent)),
+      rgb(var(--orange-400)));
 
   --gap: 0.25rem;
 
@@ -82,29 +76,68 @@ body::-webkit-scrollbar-thumb {
   border-radius: 0.25rem;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: clamp(1rem, 5vw, 3rem);
+  padding-right: clamp(1rem, 5vw, 3rem);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  max-width: 1536px;
+  margin: auto;
+}
+
+/* Estilos base para desktop */
 h1 {
-  font-size: 48px;
+  font-size: clamp(2rem, 5vw, 40px);
+  /* Mínimo 2rem, ideal 5vw, máximo 40px */
   font-weight: 700;
   line-height: 1.25;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: clamp(1.75rem, 4vw, 32px);
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 32px;
-}
-
-h2,
-h3,
-h4 {
+  font-size: clamp(1.5rem, 3.5vw, 24px);
   font-weight: 600;
   line-height: 1.25;
+}
+
+h4 {
+  font-size: clamp(1.125rem, 3vw, 16px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* Ajustes adicionales para pantallas pequeñas (opcional si ya usas clamp) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
 }
 
 p {

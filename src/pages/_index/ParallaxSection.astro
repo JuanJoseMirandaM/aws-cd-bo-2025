@@ -5,52 +5,10 @@ import {CTAS} from '@data/constants'
 import letters from '@images/assets/aws-letters.jpg'
 import {Picture} from "astro:assets";
 ---
-<section class="parallax-container" id="como-participar">
-  <div class="layer">
-    <Picture
-      alt="Comunity Day Letras"
-      class="image"
-      fetchpriority="low"
-      formats={['avif', 'webp']}
-      height={767}
-      src={letters}
-      width={1200}
-    />
-  </div>
-  <div class="parallax-cta">
-    {
-      CTAS.map(
-        ({label, description, url, variant, descriptionWeight, type}, index: number) => (
-          <>
-            <CallToAction
-              callToActionDescription={description}
-              callToActionLabel={label}
-              callToActionType={type}
-              callToActionUrl={url}
-              descriptionWeight={descriptionWeight}
-              variant={variant}
-            />
-            {index < CTAS.length - 1 && <span class="separator"/>}
-          </>
-        )
-      )
-    }
-  </div>
-  <ClickToScroll
-    href="#venue"
-    label="Ir a la información"
-  />
-</section>
-
 <style>
   .parallax-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1536px;
-    margin: auto;
-    padding-block: 420px 100px;
-    padding-inline: 0;
+    min-height: 100dvh;
+    padding-top: 420px;
     gap: 0;
     text-align: center;
     position: relative;
@@ -87,8 +45,7 @@ import {Picture} from "astro:assets";
 
   @media (max-width: 1024px) {
     .parallax-container {
-      padding-block: 48px;
-      padding-inline: 32px;
+      padding-top: 2rem;
       gap: 24px;
 
       & .layer {
@@ -103,7 +60,7 @@ import {Picture} from "astro:assets";
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-block: 48px;
+        padding-block: 16px;
 
         & .separator {
           width: 100%;
@@ -114,3 +71,40 @@ import {Picture} from "astro:assets";
     }
   }
 </style>
+
+<section class="container parallax-container" id="como-participar">
+  <div class="layer">
+    <Picture
+      alt="Comunity Day Letras"
+      class="image"
+      fetchpriority="low"
+      formats={['avif', 'webp']}
+      height={767}
+      src={letters}
+      width={1200}
+    />
+  </div>
+  <div class="parallax-cta">
+    {
+      CTAS.map(
+        ({label, description, url, variant, descriptionWeight, type}, index: number) => (
+          <>
+            <CallToAction
+              callToActionDescription={description}
+              callToActionLabel={label}
+              callToActionType={type}
+              callToActionUrl={url}
+              descriptionWeight={descriptionWeight}
+              variant={variant}
+            />
+            {index < CTAS.length - 1 && <span class="separator"/>}
+          </>
+        )
+      )
+    }
+  </div>
+  <ClickToScroll
+    href="#venue"
+    label="Ir a la información"
+  />
+</section>
