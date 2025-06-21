@@ -6,54 +6,49 @@ import { Picture } from "astro:assets";
 ---
 
 <footer class="footer">
-  <h2>Organizado por los AWS User Groups de Bolivia</h2>
-
-  <div class="badge-container">
-    <a href="https://www.meetup.com/aws-user-group-la-paz/" target="_blank" rel="noopener noreferrer">
-      <Picture
-        alt=""
-        fetchpriority="high"
-        formats={["avif", "webp"]}
-        height={150}
-        loading="eager"
-        src={awsUgLpz}
-        width={150}
-      />
-    </a>
-    <a href="https://www.meetup.com/aws-girls-bolivia/" target="_blank" rel="noopener noreferrer">
-      <Picture
-        alt="AWS Girls Bolivia"
-        fetchpriority="high"
-        formats={["avif", "webp"]}
-        height={150}
-        loading="eager"
-        src={awsGirlsBo}
-        width={150}
-      />
-    </a>
-    <a href="https://www.meetup.com/aws-user-group-cochabamba/" target="_blank" rel="noopener noreferrer">
-      <Picture
-        alt="AWS UG Cochabamba"
-        fetchpriority="high"
-        formats={["avif", "webp"]}
-        height={150}
-        loading="eager"
-        src={awsUgCbba}
-        width={150}
-      />
-    </a>
-  </div>
-
   <div class="copyright-text">
-    <span
+    <span class="column column-left"
       >Copyright ©2025 AWS Community Day Bolivia. Todos los derechos
       reservados.</span
     >
-    <span
-      >Designed with ♥ by <a
+
+    <div class="column column-center">
+      <span>Siguenos</span>
+      <a
+        href="https://www.linkedin.com/company/aws-community-day-bolivia"
+        target="_blank"
+        aria-label="LinkedIn"
+      >
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+      </a>
+      <a
+        href="https://www.youtube.com/@awscommunitydaybolivia"
+        target="_blank"
+        aria-label="YouTube"
+      >
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+      </a>
+      <a
+        href="https://www.instagram.com/awscommunitydaybolivia/"
+        target="_blank"
+        aria-label="Instagram"
+      >
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+      </a>
+      <a
+        href="https://www.facebook.com/awscommunitydaybolivia"
+        target="_blank"
+        aria-label="Facebook"
+      >
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+      </a>
+    </div>
+
+    <span class="column column-right"
+      >Crafted by ⚡ <a
         href="https://www.linkedin.com/in/juanjosemirandam/"
         target="_blank"
-        class="underline">Juan Jose Miranda</a
+        class="underline">Pepe</a
       ></span
     >
   </div>
@@ -61,61 +56,76 @@ import { Picture } from "astro:assets";
 
 <style>
   .footer {
+    background: rgb(var(--base-200));
+    border-top: 1px solid var(--white);
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding-block: 60px 20px;
+    align-items: center;
     padding-inline: 32px;
+    padding-block: 24px;
     width: 100%;
-    max-width: 1536px;
-    margin: auto;
-
-    & h2 {
-      margin: 0;
-    }
-
-    & .badge-container {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-
-      & img {
-        height: 150px;
-        width: auto;
-      }
-    }
 
     & .copyright-text {
       display: flex;
-      justify-content: space-between;
+      gap: 10px;
+      max-width: 1536px;
+      margin: auto;
+      width: 100%;
 
-      & span {
+      & .column {
         display: block;
+        flex: 1;
         font-size: 14px;
         margin: 0;
+      }
+
+      & .column-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      & .column-center {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        color: rgb(var(--orange-400));
+
+        & a {
+          color: rgb(var(--orange-400));
+        }
+      }
+
+      & .column-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
       }
     }
   }
 
   @media (width <= 1024px) {
     .footer {
-      padding: 0 24px;
+      padding: 12px 24px;
 
       & h2 {
         font-size: 32px;
       }
 
-      & img {
-        width: 150px;
-        height: 150px;
-      }
-
       & .copyright-text {
         flex-direction: column;
 
-        & span {
+        & .column {
           font-size: 12px;
+        }
+
+        & .column-left {
+          justify-content: center;
+          text-align: center;
+        }
+
+        & .column-right {
+          justify-content: center;
         }
       }
     }

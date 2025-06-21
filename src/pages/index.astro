@@ -1,18 +1,26 @@
 ---
 import Layout from '@layouts/Layout.astro'
 import OpenGraph from '@components/OpenGraph.astro'
+import Footer from "@components/ui/Footer.astro";
+import OrganizerBadges from "@components/ui/OrganizerBadges.astro";
 import venueData from '@data/venue.json'
 
 import Hero from './_index/HeroSection.astro'
 import ParallaxSection from "./_index/ParallaxSection.astro";
 import VenueSection from './_index/VenueSection.astro';
-import Footer from "../components/ui/Footer.astro";
 
 const options = {
   title: 'AWS Community Day Bolivia 2025',
   description: 'Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.'
 }
 ---
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+</style>
 
 <Layout options={options}>
   <OpenGraph
@@ -29,6 +37,7 @@ const options = {
       title={venueData.title}
       address={venueData.address}
     />
+    <OrganizerBadges />
     <Footer />
   </main>
 </Layout>

@@ -1,0 +1,100 @@
+---
+import awsUgLpz from "@images/assets/aws-ug-lpz.png";
+import awsGirlsBo from "@images/assets/aws-girls-bo.png";
+import awsUgCbba from "@images/assets/aws-ug-cbba.png";
+import { Picture } from "astro:assets";
+---
+
+<style>
+  .organizer-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 32px;
+    width: 100%;
+    max-width: 1536px;
+    margin: auto;
+
+    & h2 {
+      margin: 0;
+    }
+
+    & .badge-container {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      & img {
+        height: 150px;
+        width: auto;
+      }
+    }
+  }
+
+  @media (width <= 1024px) {
+    .organizer-badges {
+      padding: 0 24px;
+
+      & h2 {
+        font-size: 32px;
+      }
+
+      & img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+</style>
+<section class="organizer-badges">
+  <h2>Organizado por los AWS User Groups de Bolivia</h2>
+
+  <div class="badge-container">
+    <a
+      href="https://www.meetup.com/aws-user-group-la-paz/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Picture
+        alt=""
+        fetchpriority="high"
+        formats={["avif", "webp"]}
+        height={150}
+        loading="eager"
+        src={awsUgLpz}
+        width={150}
+      />
+    </a>
+    <a
+      href="https://www.meetup.com/aws-girls-bolivia/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Picture
+        alt="AWS Girls Bolivia"
+        fetchpriority="high"
+        formats={["avif", "webp"]}
+        height={150}
+        loading="eager"
+        src={awsGirlsBo}
+        width={150}
+      />
+    </a>
+    <a
+      href="https://www.meetup.com/aws-user-group-cochabamba/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Picture
+        alt="AWS UG Cochabamba"
+        fetchpriority="high"
+        formats={["avif", "webp"]}
+        height={150}
+        loading="eager"
+        src={awsUgCbba}
+        width={150}
+      />
+    </a>
+  </div>
+</section>
