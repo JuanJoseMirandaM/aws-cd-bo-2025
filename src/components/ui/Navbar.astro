@@ -1,0 +1,84 @@
+---
+import Button from '@components/ui/Button.astro'
+import logo from "@images/assets/awscd-bo-logo.png";
+
+---
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo">
+      <img src={logo.src} alt="AWS Community Day Bolivia" height="40" />
+    </a>
+
+    <ul class="menu">
+      <!-- <li><a href="/agenda">Agenda</a></li> -->
+      <!-- <li><a href="/speakers">Speakers</a></li> -->
+      <li><a href="/cfs">CFS</a></li>
+      <li><a href="/sponsors">Sponsors</a></li>
+      <li><a href="/lugar">Lugar</a></li>
+      <!-- <li><a href="/comunidad">Comunidad</a></li> -->
+      <li><a href="/faqs">FAQs</a></li>
+    </ul>
+
+    <Button
+      class="register-button"
+      component='a'
+      href='https://cba.ucb.edu.bo/'
+      variant='outlined'
+    >
+      Registrate
+    </Button>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    padding: 56px 32px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .register-button {
+    padding: 0.5rem 1.2rem;
+
+    &:hover {
+      color: var(--white);
+      background: var(--accent-gradient);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu {
+      display: none; /* puedes implementar burger menu luego */
+    }
+  }
+</style>

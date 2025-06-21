@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro'
 import OpenGraph from '@components/OpenGraph.astro'
+import Navbar from "@components/ui/Navbar.astro";
 import Footer from "@components/ui/Footer.astro";
 import OrganizerBadges from "@components/ui/OrganizerBadges.astro";
 import venueData from '@data/venue.json'
@@ -29,7 +30,7 @@ const options = {
     slot="social-media"
     title={options.title}
   />
-
+  <Navbar />
 	<main>
     <Hero />
     <ParallaxSection />
