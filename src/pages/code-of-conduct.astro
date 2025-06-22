@@ -1,0 +1,126 @@
+---
+import Layout from "@layouts/Layout.astro";
+import OpenGraph from "@components/OpenGraph.astro";
+import Navbar from "@components/ui/Navbar.astro";
+import Footer from "@components/ui/Footer.astro";
+
+const options = {
+  title: "Codigo de Conducta – AWS Community Day Bolivia 2025",
+  description:
+    "Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.",
+};
+---
+
+<style>
+  .code-container {
+    padding-top: 8rem;
+    gap: var(--gap);
+
+    & h3 {
+      margin: 16px 0 4px 0;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
+</style>
+
+<Layout options={options}>
+  <OpenGraph
+    description={options.description}
+    image="/og/og.jpg"
+    slot="social-media"
+    title={options.title}
+  />
+  <Navbar />
+  <section class="container code-container">
+    <h1>Código de conducta</h1>
+
+    <h3>Importancia</h3>
+    <p>
+      Creemos firmemente en el valor y la importancia de un entorno en el que
+      todos los miembros de la comunidad AWS y los participantes en eventos se
+      sientan bienvenidos y seguros. Este Código de Conducta explica qué tipo de
+      comportamiento esperamos de los miembros de la comunidad AWS y de los
+      participantes en eventos. Los términos de este Código de Conducta no son
+      negociables. No toleraremos comportamientos contrarios a este Código de
+      Conducta.
+    </p>
+
+    <h3>Comportamiento</h3>
+    <ul>
+      <li>
+        Te comportarás de forma que crees un entorno seguro y de apoyo para
+        todos los participantes del evento.
+      </li>
+      <li>
+        No participarás en discursos o comportamientos perturbadores, ni
+        interferirá de ningún otro modo en el evento o en la participación de
+        otras personas en el mismo.
+      </li>
+      <li>
+        No participarás en ningún tipo de discurso o comportamiento acosador,
+        ofensivo, discriminatorio o amenazador, incluyendo (pero sin limitarse
+        a) los relacionados con la raza, el sexo, la identidad y expresión de
+        género, el origen nacional, la religión, la discapacidad, el estado
+        civil, la edad, la orientación sexual.
+      </li>
+      <li>
+        La suplantación de identidad, incluyendo el intento de acceder al evento
+        utilizando el registro de otra persona, es un asunto grave que no será
+        tolerado. Esto abarca cualquier forma de falsificación de identidad.
+      </li>
+      <li>
+        Cumplirás las instrucciones del personal del evento y del lugar de
+        celebración.
+      </li>
+    </ul>
+
+    <h3>Alcance</h3>
+    <p>
+      Esperamos que todos los participantes en el evento (incluidos los
+      empleados de AWS, asistentes, proveedores, patrocinadores, ponentes,
+      voluntarios e invitados) respeten los principios de este Código de
+      Conducta. Este Código de Conducta cubre el evento principal y todos los
+      eventos relacionados (sociales o de otro tipo).
+    </p>
+
+    <h3>Consecuencias</h3>
+    <p>
+      Si consideramos que no estás cumpliendo este Código de Conducta, podemos
+      cancelar tu solicitud, negarte la entrada o exigirte que abandones todos
+      los sitios del evento. Todas las decisiones quedan a nuestra entera
+      discreción. Involucraremos a las fuerzas del orden locales si lo
+      consideramos oportuno. Si te denegamos la entrada o te exigimos que
+      abandones el sitio, no tendrás derecho a recibir el reembolso de ninguna
+      de las tarifas que hayas abonado en relación con el evento o los eventos
+      relacionados. El incumplimiento de este Código de Conducta puede dar lugar
+      a la descalificación para participar en futuros eventos.
+    </p>
+
+    <h3>Publicaciones en redes sociales</h3>
+    <p>
+      Siéntete libre de tomar fotos y/o videos y publicarlas a través de tus
+      perfiles en las redes sociales. Asegúrate de etiquetarnos en
+      #awscommunitydaybolivia, #awsbolivia y #awscommunity.
+    </p>
+
+    <h3>Ponte en contacto</h3>
+    <p>
+      Si eres testigo o víctima de un comportamiento inapropiado, o si tiene
+      alguna duda relacionada con este código de conducta, ponte en contacto con
+      los organizadores del AWS Community Day, en contacto@awscommunity.org.bo o
+      directamente con cualquier miembro del staff.
+    </p>
+
+    <h3>Derechos de image</h3>
+    <p>
+      Amazon Web Services, AWS y el logotipo de AWS son Marcas registradas de
+      Amazon.com, Inc. o sus afiliados.
+    </p>
+  </section>
+  <main>
+    <Footer />
+  </main>
+</Layout>
