@@ -1,0 +1,32 @@
+---
+import Layout from '@layouts/Layout.astro';
+import OpenGraph from '@components/OpenGraph.astro';
+import Header from "@components/ui/HeaderSection.astro";
+import Navbar from "@components/ui/Navbar.astro";
+import Footer from "@components/ui/Footer.astro";
+
+const options = {
+  title: 'Call for Speakers – AWS Community Day Bolivia 2025',
+  description: 'Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.'
+}
+---
+
+<Layout options={options}>
+  <OpenGraph
+    description={options.description}
+    image="/og/og.jpg"
+    slot="social-media"
+    title={options.title}
+  />
+  <Navbar />
+	<main>
+    <Header
+      title="Speaker de otro nivel en nuestro Community Day"
+      description="Sumate al evento más importante de la comunidad AWS en Bolivia. Postula tu charla, participá de talleres interactivos y viví una jornada única de innovación y networking."
+      buttonText="Postular charla"
+      buttonLink="https://sessionize.com/aws-community-day-bolivia-2025/"
+      image="/images/cfs-portada.jpg"
+    />
+  </main>
+  <Footer />
+</Layout>

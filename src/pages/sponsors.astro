@@ -1,0 +1,32 @@
+---
+import Layout from '@layouts/Layout.astro'
+import OpenGraph from '@components/OpenGraph.astro'
+import Header from "@components/ui/HeaderSection.astro";
+import Navbar from "@components/ui/Navbar.astro";
+import Footer from "@components/ui/Footer.astro";
+
+const options = {
+  title: 'Sponsors – AWS Community Day Bolivia 2025',
+  description: 'Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.'
+}
+---
+
+<Layout options={options}>
+  <OpenGraph
+    description={options.description}
+    image="/og/og.jpg"
+    slot="social-media"
+    title={options.title}
+  />
+  <Navbar />
+	<main>
+    <Header
+      title="Sponsors"
+      description="Integer id augue iaculis, iaculis orci ut, blandit quam. Donec in elit auctor, finibus quam in, phar erdum et malesuada fames ac ante ipsum primis in faucibus."
+      buttonText="Ser sponsor"
+      buttonLink="https://tally.so/r/nWgO9P"
+      image="/images/sponsor-portada.jpg"
+    />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,24 @@
+---
+import Layout from '@layouts/Layout.astro'
+import OpenGraph from '@components/OpenGraph.astro'
+import Navbar from "@components/ui/Navbar.astro";
+import Footer from "@components/ui/Footer.astro";
+
+const options = {
+  title: 'Preguntas frequentes – AWS Community Day Bolivia 2025',
+  description: 'Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.'
+}
+---
+
+<Layout options={options}>
+  <OpenGraph
+    description={options.description}
+    image="/og/og.jpg"
+    slot="social-media"
+    title={options.title}
+  />
+  <Navbar />
+	<main>
+    <Footer />
+  </main>
+</Layout>

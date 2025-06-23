@@ -1,0 +1,25 @@
+---
+import "../../styles/header-section.css";
+
+import Button from "@components/ui/Button.astro";
+
+const { title, description, buttonText, buttonLink, image } = Astro.props;
+---
+<section class="container header-container">
+  <div class="content">
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <Button
+      class="register-button"
+      component='a'
+      href={buttonLink}
+      variant='contained'
+    >
+      {buttonText}
+    </Button>
+  </div>
+
+  <div class="image-wrapper">
+    <img src={image} alt="Imagen de sponsors" />
+  </div>
+</section>
