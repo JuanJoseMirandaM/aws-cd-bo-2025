@@ -1,14 +1,51 @@
 ---
-import Layout from '@layouts/Layout.astro'
-import OpenGraph from '@components/OpenGraph.astro'
+import Layout from "@layouts/Layout.astro";
+import OpenGraph from "@components/OpenGraph.astro";
 import Navbar from "@components/ui/Navbar.astro";
 import Footer from "@components/ui/Footer.astro";
+import { faqs } from "@data/faqs";
 
 const options = {
-  title: 'Preguntas frequentes – AWS Community Day Bolivia 2025',
-  description: 'Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.'
-}
+  title: "Preguntas frequentes – AWS Community Day Bolivia 2025",
+  description:
+    "Participa en AWS Community Day Bolivia 2025: charlas, talleres y labs sobre la nube AWS. Aprende con expertos y conecta con la comunidad tech.",
+};
 ---
+
+<style>
+  .code-container {
+    padding-top: 8rem;
+    gap: var(--gap);
+
+    & h3 {
+      margin: 16px 0 4px 0;
+    }
+
+    & p {
+      margin: 0;
+    }
+
+    & .faq-detail {
+      border-bottom: 1px solid #878787;
+      padding-block: 1rem;
+
+      & .faq-question {
+        cursor: pointer;
+        color: white;
+        font-size: medium;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      & .faq-answare {
+        color: #878787;
+        font-size: medium;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+</style>
 
 <Layout options={options}>
   <OpenGraph
@@ -18,7 +55,22 @@ const options = {
     title={options.title}
   />
   <Navbar />
-	<main>
+  <section class="container code-container">
+    <h1>Preguntas frecuentes</h1>
+
+    {
+      faqs.map((faq, index) => (
+        <details class="faq-detail" key={index}>
+          <summary class="faq-question">
+            {faq.question}
+            <span class="material-symbols-outlined">add</span>
+          </summary>
+          <p class="faq-answare">{faq.answer}</p>
+        </details>
+      ))
+    }
+  </section>
+  <main>
     <Footer />
   </main>
 </Layout>
